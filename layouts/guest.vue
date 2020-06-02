@@ -1,30 +1,11 @@
 <template>
   <div>
-    <header-bar />
     <nuxt />
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import HeaderBar from '@/components/layouts/header'
 export default {
-  components: {
-    HeaderBar
-  },
-  data: () => ({
-    sidebarToggled: ['app', 'sidebar-mini', 'pace-done'],
-    sidebarNotToggled: ['app', 'sidebar-mini', 'pace-done', 'sidenav-toggled']
-  }),
-  computed: mapState(['sidebar']),
-  head () {
-    return {
-      title: 'Ana Sayfa - İngilizce Soru Cevap',
-      bodyAttrs: {
-        class: this.sidebar ? this.sidebarToggled : this.sidebarNotToggled
-      }
-    }
-  }
 }
 </script>
 

@@ -1,39 +1,172 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxt-vue-admin-panel
-      </h1>
-      <h2 class="subtitle">
-        rh-soru-cevap admin panel nuxt-apollo-firebase
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <main class="app-content">
+    <div class="app-title">
+      <div>
+        <h1><i class="fa fa-dashboard" /> Anasayfa</h1>
+      </div>
+      <ul class="app-breadcrumb breadcrumb">
+        <li class="breadcrumb-item">
+          <i class="fa fa-home fa-lg" />
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Anasayfa</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="widget-small primary coloured-icon">
+          <i class="icon fa fa-users fa-3x" />
+          <div class="info">
+            <h4>Öğrenci</h4>
+            <p><b>50</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="widget-small info coloured-icon">
+          <i class="icon fa fa-thumbs-o-up fa-3x" />
+          <div class="info">
+            <h4>Öğretmen</h4>
+            <p><b>10</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="widget-small warning coloured-icon">
+          <i class="icon fa fa-files-o fa-3x" />
+          <div class="info">
+            <h4>Günlük Soru</h4>
+            <p><b>100000</b></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="widget-small danger coloured-icon">
+          <i class="icon fa fa-star fa-3x" />
+          <div class="info">
+            <h4>Yeni Soru</h4>
+            <p><b>20</b></p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">
+              Soru Başlığı
+            </h3>
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash" /></a>
+            </div>
+          </div>
+          <div class="tile-body">
+            <b>Soru Konusu</b><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus obcaecati accusamus veritatis dolore deserunt recusandae, quas repudiandae qui earum cum consectetur nisi suscipit ex aperiam
+            officia reiciendis, sequi error.
+          </div>
+        </div>
+      </div>
+      <div class="clearfix" />
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">
+              Soru Başlığı
+            </h3>
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash" /></a>
+            </div>
+          </div>
+          <div class="tile-body">
+            <b>Soru Konusu</b><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus obcaecati accusamus veritatis dolore deserunt recusandae, quas repudiandae qui earum cum consectetur nisi suscipit ex aperiam
+            officia reiciendis, sequi error.
+          </div>
+        </div>
+      </div>
+      <div class="clearfix" />
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">
+              Soru Başlığı
+            </h3>
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash" /></a>
+            </div>
+          </div>
+          <div class="tile-body">
+            <b>Soru Konusu</b><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus obcaecati accusamus veritatis dolore deserunt recusandae, quas repudiandae qui earum cum consectetur nisi suscipit ex aperiam
+            officia reiciendis, sequi error.
+          </div>
+        </div>
+      </div>
+      <div class="clearfix" />
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">
+              Soru Başlığı
+            </h3>
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash" /></a>
+            </div>
+          </div>
+          <div class="tile-body">
+            <b>Soru Konusu</b><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus obcaecati accusamus veritatis dolore deserunt recusandae, quas repudiandae qui earum cum consectetur nisi suscipit ex aperiam
+            officia reiciendis, sequi error.
+          </div>
+        </div>
+      </div>
+      <div class="clearfix" />
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">
+              Soru Başlığı
+            </h3>
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash" /></a>
+            </div>
+          </div>
+          <div class="tile-body">
+            <b>Soru Konusu</b><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus obcaecati accusamus veritatis dolore deserunt recusandae, quas repudiandae qui earum cum consectetur nisi suscipit ex aperiam
+            officia reiciendis, sequi error.
+          </div>
+        </div>
+      </div>
+      <div class="clearfix" />
+      <div class="col-md-6">
+        <div class="tile">
+          <div class="tile-title-w-btn">
+            <h3 class="title">
+              Soru Başlığı
+            </h3>
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit" /></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash" /></a>
+            </div>
+          </div>
+          <div class="tile-body">
+            <b>Soru Konusu</b><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repellendus obcaecati accusamus veritatis dolore deserunt recusandae, quas repudiandae qui earum cum consectetur nisi suscipit ex aperiam
+            officia reiciendis, sequi error.
+          </div>
+        </div>
+      </div>
+      <div class="clearfix" />
+    </div>
+  </main>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
   components: {
-    Logo
+
   }
 }
 </script>
@@ -46,24 +179,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
 }
 
 .links {
