@@ -161,6 +161,7 @@
 <script>
 
 export default {
+  middleware: 'auth',
   loading: {
     color: 'blue',
     height: '5px'

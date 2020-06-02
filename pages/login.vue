@@ -6,7 +6,7 @@
       <img src="~/assets/images/logo.png" width="50%" alt="">
     </div>
     <div class="login-box" :class="{flipped :showRegisterWidget }">
-      <form class="login-form" action="index.html">
+      <form class="login-form">
         <h3 class="login-head">
           <i class="fa fa-lg fa-fw fa-user" />Giriş Yap
         </h3>
@@ -30,13 +30,17 @@
             </p>
           </div>
         </div>
+
         <div class="form-group btn-container">
           <button class="btn btn-primary btn-block">
             <i class="fa fa-sign-in fa-lg fa-fw" />GİRİŞ YAP
           </button>
+          <nuxt-link to="/admin-login" exact class="btn btn-primary btn-block">
+            <i class="fa fa-sign-in fa-lg fa-fw" />ADMIN GİRİŞ
+          </nuxt-link>
         </div>
       </form>
-      <form class="forget-form" action="index.html">
+      <form class="forget-form">
         <h3 class="login-head">
           <i class="fa fa-lg fa-fw fa-lock" /><br>Şifrenizi Sıfırlayın
         </h3>
@@ -61,6 +65,7 @@
 
 <script>
 export default {
+  middleware: '',
   layout: 'guest',
   fetch () {
     console.log('fetch')

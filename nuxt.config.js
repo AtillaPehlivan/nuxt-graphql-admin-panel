@@ -35,21 +35,22 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [{ src: '~/plugins/nuxt-client-init.js', ssr: false }],
  
   /*
   ** Router settings
   */
   router: {
-    linkActiveClass: 'active'
+    linkActiveClass: 'active',
+
   },
    /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    ['@nuxtjs/eslint-module', { 'fix': true }]
+    ['@nuxtjs/eslint-module', { 'fix': true }],
+    '@nuxtjs/apollo'
   ],
   /*
   ** Nuxt.js modules
@@ -76,5 +77,21 @@ export default {
     */
     extend(config, ctx) {
     }
+  },
+  /*
+  ** Apollo config
+  */
+ apollo: {
+  cookieAttributes: {
+    expires: 7, // optional, default: 7 (days)
+  },
+  includeNodeModules: true, // optional, default: false (this includes graphql-tag for node_modules folder)
+  //authenticationType: 'Bearer', // optional, default: 'Bearer'
+  // optional
+  errorHandler: '~/plugins/apollo-error-handler.js',
+  // required
+  clientConfigs: {
+    default: '~/apollo/clientConfig.js'
   }
+},
 }

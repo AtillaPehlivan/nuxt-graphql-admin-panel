@@ -85,6 +85,7 @@
 </template>
 <script>
 export default {
+  middleware: 'auth',
   loading: {
     color: 'red',
     height: '15px'
