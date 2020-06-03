@@ -2,7 +2,9 @@
   <main class="app-content">
     <div class="app-title">
       <div>
-        <h1><i class="fa fa-dashboard" /> Öğrenci Yönetimi</h1>
+        <h1>
+          <i class="fa fa-dashboard" /> Öğrenci Yönetimi
+        </h1>
       </div>
       <ul class="app-breadcrumb breadcrumb">
         <li class="breadcrumb-item">
@@ -19,7 +21,9 @@
           <i class="icon fa fa-star fa-3x" />
           <div class="info">
             <h4>Aktif Öğrenci Sayısı</h4>
-            <p><b>50</b></p>
+            <p>
+              <b>50</b>
+            </p>
           </div>
         </div>
       </div>
@@ -28,7 +32,9 @@
           <i class="icon fa fa-users fa-3x" />
           <div class="info">
             <h4>Pasif Öğrenci Sayısı</h4>
-            <p><b>10</b></p>
+            <p>
+              <b>10</b>
+            </p>
           </div>
         </div>
       </div>
@@ -41,33 +47,19 @@
               <table id="sampleTable" class="table table-hover table-bordered">
                 <thead>
                   <tr>
+                    <th>Id</th>
                     <th>Adı</th>
-                    <th>Soyad</th>
                     <th>E-Posta</th>
-                    <th>Paket</th>
-                    <th>Soru Sayısı</th>
-                    <th>İşlem</th>
+                    <th>Rol</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Atilla</td>
-                    <td>Pehlivan</td>
-                    <td>web.atillapehlivan@gmail.com</td>
-                    <td>YDS Paketi</td>
-                    <td>2000 Soru</td>
-                    <td>
-                      <button class="btn btn-primary wd-100p" type="button">
-                        İşlem Yap
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Alper</td>
-                    <td>Demirel</td>
-                    <td>alperdemirelceng@gmail.com</td>
-                    <td>TOEFL Paketi</td>
-                    <td>5000 Soru</td>
+                  <tr v-for="(user,key) in users" :key="key">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role }}</td>
+
                     <td>
                       <button class="btn btn-primary wd-100p" type="button">
                         İşlem Yap
@@ -84,18 +76,29 @@
   </main>
 </template>
 <script>
+import { mapState } from 'vuex'
+import fetchUsers from '~/apollo/queries/fetchUsers.gql'
+
 export default {
   middleware: 'auth',
   loading: {
     color: 'red',
     height: '15px'
   },
-  mounted () {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  }
+  computed: mapState(['xHasuraAdminSecret']),
+  apollo: {
+    users: {
+      prefetch: false,
+      query: fetchUsers,
+      context () {
+        return {
+          headers: {
+            'X-Hasura-Admin-Secret': this.xHasuraAdminSecret
+          }
+        }
+      }
+    }
+  },
+  mounted () {}
 }
 </script>

@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import fetchUsers from '~/apollo/queries/fetchUsers.gql'
+import checkAdmin from '~/apollo/queries/checkAdmin.gql'
 
 export default {
   layout: 'guest',
@@ -60,7 +60,7 @@ export default {
       if (this.secret.length <= 0) { return null }
       this.$apollo
         .query({
-          query: fetchUsers,
+          query: checkAdmin,
           variables: {
             // var1: 'this is a variable'
           },
