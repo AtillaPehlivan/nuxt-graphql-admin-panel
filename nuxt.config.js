@@ -22,7 +22,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: 'red', height: '15px' },
+ loading: { color: "black",height:'5px', throttle: 0 },
 
   // Simple usage:
 
@@ -92,6 +92,14 @@ export default {
   // required
   clientConfigs: {
     default: '~/apollo/clientConfig.js'
-  }
+  },
+  defaultOptions: {
+    // See 'apollo' definition
+    // For example: default query options
+    $query: {
+      loadingKey: 'loading',
+      fetchPolicy: 'cache-and-network',
+    },
+  },
 },
 }

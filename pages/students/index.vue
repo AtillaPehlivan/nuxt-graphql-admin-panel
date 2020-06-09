@@ -22,7 +22,7 @@
           <div class="info">
             <h4>Aktif Öğrenci Sayısı</h4>
             <p>
-              <b>50</b>
+              <b>{{ users.length -1 }}</b>
             </p>
           </div>
         </div>
@@ -51,6 +51,7 @@
                     <th>Adı</th>
                     <th>E-Posta</th>
                     <th>Rol</th>
+                    <th>İşlem</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -61,9 +62,14 @@
                     <td>{{ user.role }}</td>
 
                     <td>
-                      <button class="btn btn-primary wd-100p" type="button">
-                        İşlem Yap
-                      </button>
+                      <b-dropdown id="btn btn-primary wd-100p" variant="primary" text="İşlem Yap" type="button">
+                        <b-dropdown-item>
+                          <nuxt-link :to="'/students/'+user.id" exact>
+                            Düzenle
+                          </nuxt-link>
+                        </b-dropdown-item>
+                        <b-dropdown-item>Sil</b-dropdown-item>
+                      </b-dropdown>
                     </td>
                   </tr>
                 </tbody>
@@ -81,9 +87,11 @@ import fetchUsers from '~/apollo/queries/fetchUsers.gql'
 
 export default {
   middleware: 'auth',
-  loading: {
-    color: 'red',
-    height: '15px'
+  loading: true,
+  data () {
+    return {
+      users: []
+    }
   },
   computed: mapState(['xHasuraAdminSecret']),
   apollo: {

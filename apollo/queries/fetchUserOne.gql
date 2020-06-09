@@ -1,0 +1,10 @@
+query user($id: Int!) {
+   users_by_pk(id: $id) {
+    avatar
+    created_at
+    email
+    id
+    name
+    uid
+  }
+}

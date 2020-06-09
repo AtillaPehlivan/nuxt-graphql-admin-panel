@@ -1,5 +1,5 @@
 query users {
-  users(where: {role: {_eq: STUDENT}}) {
+  users(where: {role: {_eq: TEACHER}}) {
     email
     id
     name

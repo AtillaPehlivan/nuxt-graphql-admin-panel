@@ -167,7 +167,7 @@
         >
         <div>
           <p class="app-sidebar__user-name">
-            Hidayet Arasan
+            {{ xHasuraAdminSecret != null ? 'Admin':'Kullanıcı' }}
           </p>
           <p class="app-sidebar__user-designation">
             Yönetici
@@ -220,7 +220,8 @@ export default {
   computed: mapState([
     'sidebar',
     'sidebarUserSettings',
-    'sidebarUserNotifications'
+    'sidebarUserNotifications',
+    'xHasuraAdminSecret'
   ])
 }
 </script>

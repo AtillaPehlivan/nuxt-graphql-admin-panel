@@ -1,0 +1,8 @@
+query users {
+  questions {
+    image
+    name
+    id
+    title
+  }
+}
