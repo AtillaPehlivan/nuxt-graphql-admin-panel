@@ -1,0 +1,8 @@
+  query lastTenquestions {
+    questions(limit: 10, order_by: {id: desc}) {
+        id
+        image
+        name
+        title
+  }
+}

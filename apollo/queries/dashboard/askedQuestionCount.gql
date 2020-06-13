@@ -1,0 +1,7 @@
+query askedQuestionCount {
+  user_question_aggregate {
+    aggregate {
+      count
+    }
+  }
+}
