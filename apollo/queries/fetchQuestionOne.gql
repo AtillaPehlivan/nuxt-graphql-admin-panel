@@ -1,0 +1,15 @@
+query questions_by_pk($id: Int!) {
+ questions_by_pk(id: $id) {
+    id
+    image
+    name
+    title
+    question_tags {
+      tag {
+        id
+        name
+      }
+    }
+    true_option
+  }
+}

@@ -72,9 +72,21 @@
                     <td>{{ question.name }}</td>
 
                     <td>
-                      <button class="btn btn-primary wd-100p" type="button">
-                        İşlem Yap
-                      </button>
+                      <b-dropdown
+                        id="btn btn-primary wd-100p"
+                        variant="primary"
+                        text="İşlem Yap"
+                        type="button"
+                      >
+                        <b-dropdown-item>
+                          <nuxt-link :to="'/questions/'+question.id" exact>
+                            Düzenle
+                          </nuxt-link>
+                        </b-dropdown-item>
+                        <b-dropdown-item @click="deleteById(question.id)">
+                          Sil
+                        </b-dropdown-item>
+                      </b-dropdown>
                     </td>
                   </tr>
                 </tbody>

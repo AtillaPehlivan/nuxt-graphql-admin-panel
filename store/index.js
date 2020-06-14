@@ -36,6 +36,7 @@ export const mutations = {
 
 export const actions = {
   nuxtClientInit (context, payload) {
+    console.log('nuxtClientInit')
     const token = localStorage.getItem('token') ? localStorage.getItem('token') : null
     context.commit('setAuthStatus', { token })
   }

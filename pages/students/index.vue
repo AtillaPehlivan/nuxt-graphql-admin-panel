@@ -62,13 +62,20 @@
                     <td>{{ user.role }}</td>
 
                     <td>
-                      <b-dropdown id="btn btn-primary wd-100p" variant="primary" text="İşlem Yap" type="button">
+                      <b-dropdown
+                        id="btn btn-primary wd-100p"
+                        variant="primary"
+                        text="İşlem Yap"
+                        type="button"
+                      >
                         <b-dropdown-item>
                           <nuxt-link :to="'/students/'+user.id" exact>
                             Düzenle
                           </nuxt-link>
                         </b-dropdown-item>
-                        <b-dropdown-item>Sil</b-dropdown-item>
+                        <b-dropdown-item @click="deleteById(user.id)">
+                          Sil
+                        </b-dropdown-item>
                       </b-dropdown>
                     </td>
                   </tr>
@@ -107,6 +114,27 @@ export default {
       }
     }
   },
-  mounted () {}
+  mounted () {},
+  methods: {
+    deleteById (id) {
+      this.$bvModal.msgBoxConfirm('Veriler Silinmek Üzere ?', {
+        title: 'Onaylama Ekranı',
+        size: 'sm',
+        buttonSize: 'sm',
+        okVariant: 'danger',
+        okTitle: 'EVET',
+        cancelTitle: 'HAYIR',
+
+        hideHeaderClose: false,
+        centered: true
+      })
+        .then((value) => {
+          console.log(value)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+  }
 }
 </script>

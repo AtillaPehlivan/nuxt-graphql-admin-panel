@@ -3,7 +3,7 @@
     <div class="app-title">
       <div>
         <h1>
-          <i class="fa fa-dashboard" /> Öğrenci Yönetimi
+          <i class="fa fa-dashboard" /> Öğretmen Yönetimi
         </h1>
       </div>
       <ul class="app-breadcrumb breadcrumb">
@@ -11,7 +11,7 @@
           <i class="fa fa-home fa-lg" />
         </li>
         <li class="breadcrumb-item">
-          <a href="#">Öğrenci Yönetimi</a>
+          <a href="#">Öğretmen Yönetimi</a>
         </li>
       </ul>
     </div>

@@ -1,0 +1,5 @@
+mutation update_questions_by_pk($id:Int!,$name:String!,$title:String!,$true_option:Int!) {
+    update_questions_by_pk(pk_columns: {id:$id}, _set: {name: $name, title: $title,true_option:$true_option}) {
+    id
+  }
+}
