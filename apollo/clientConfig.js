@@ -13,6 +13,6 @@ export default function (context) {
       // headers: header
     },
     cache: new InMemoryCache(),
-    wsEndpoint: 'ws://ingilizce-soru-cevap.herokuapp.com/v1/graphql'
+    wsEndpoint: 'wss://ingilizce-soru-cevap.herokuapp.com/v1/graphql'
   }
 }
