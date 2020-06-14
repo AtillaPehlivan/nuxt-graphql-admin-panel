@@ -8,7 +8,7 @@ export default function (context) {
 
   return {
     httpLinkOptions: {
-      uri: 'http://ingilizce-soru-cevap.herokuapp.com/v1/graphql',
+      uri: 'https://ingilizce-soru-cevap.herokuapp.com/v1/graphql',
       credentials: 'same-origin'
       // headers: header
     },
