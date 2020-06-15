@@ -1,4 +1,4 @@
-# nuxt-vue-admin-panel
+# nuxt-apollo-admin-panel
 
 > rh-soru-cevap admin panel nuxt-apollo-firebase
 
