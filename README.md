@@ -2,6 +2,14 @@
 
 > rh-soru-cevap admin panel nuxt-apollo-firebase
 
+(Vue) Nuxt
+
+Apollo (GraphQl)
+
+postgresql (Backend)
+
+Hasura - https://hasura.io/
+
 ## Build Setup
 
 ```bash
