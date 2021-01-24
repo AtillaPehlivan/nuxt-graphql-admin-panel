@@ -21,5 +21,9 @@ $ npm run generate
 Live demo : https://friendly-noether-c4e095.netlify.app/
 
 SS: 
+![img1](https://github.com/AtillaPehlivan/nuxt-graphql-admin-panel/blob/master/static/img1.jpg "img1")
+![img2](https://github.com/AtillaPehlivan/nuxt-graphql-admin-panel/blob/master/static/img2.jpg "img3")
+![img3](https://github.com/AtillaPehlivan/nuxt-graphql-admin-panel/blob/master/static/img3.jpg "img3")
+
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
