@@ -18,5 +18,8 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+Live demo : https://friendly-noether-c4e095.netlify.app/
+
+SS: 
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
