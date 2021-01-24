@@ -4,9 +4,9 @@
 
 (Vue) Nuxt
 
-Apollo (GraphQl)
+Apollo (GraphQL)
 
-postgresql (Backend)
+PostgreSQL (Backend)
 
 Hasura - https://hasura.io/
 
